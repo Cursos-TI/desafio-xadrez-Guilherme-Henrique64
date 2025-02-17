@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    int opcao, opcao2;
-    int bispo, torre, rainha;
+    int opcao, opcao2 = -1;
+    int bispo, torre, rainha, cavalo, cavalo2;
 
 
     printf("       ==============================================\n");
@@ -20,11 +20,12 @@ int main() {
     if (opcao == 1) {
         printf("\n      Você escolheu jogar!");
         while (opcao2 != 0){
-            printf("\nEscolha qual peça deseja mover:\n");
+            printf("\n\nEscolha qual peça deseja mover:\n");
     
             printf("1. Bispo\n");
             printf("2. Torre\n");
             printf("3. Rainha\n");
+            printf("4. Cavalo\n");
             printf("Ou digite 0 para sair!\n");
             printf("Digite: ");
             scanf("%d", &opcao2);
@@ -43,17 +44,25 @@ int main() {
                     for (torre = 0; torre < 5; torre++){
                         printf("Direita ");
                     }
-                    printf("\n");
                     break;
                 case 3:
                     printf("Você escolheu mover a Rainha!\n");
                     for (rainha = 0; rainha < 8; rainha++){
                         printf("Esquerda ");
                     }
-                    printf("\n");
                     break;
+                case 4:
+                    printf("Você escolheu mover o Cavalo!\n");
+                    for (cavalo = 0; cavalo < 2; cavalo++){
+                        printf("Cima\n");
+                        for (cavalo2 = 0; cavalo2 < cavalo; cavalo2++){
+                            printf("Direita ");
+                    }   }
+                    break;
+                    printf("\n");
+                    
                 case 0:
-                    printf("        Saindo...\n\n");
+                    printf("Saindo...\n\n");
                     return 0;
                     break;
                 default:
@@ -63,7 +72,7 @@ int main() {
     
     }
     }else if (opcao == 2) {
-        printf("Você escolheu sair!\n");
+        printf("Saindo...!\n");
     }else {
         printf("Opção inválida!\n");
     }
