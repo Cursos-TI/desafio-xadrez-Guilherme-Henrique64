@@ -1,8 +1,35 @@
 #include <stdio.h>
 
+void movimentoBispo (bispo){
+    for (bispo = 0; bispo < 5; bispo++){
+        printf("Cima\n");
+        printf("Direita\n");    
+    }
+}
+
+void movimentoTorre (torre){
+    for (torre = 0; torre < 5; torre++){
+        printf("Direita ");
+    }
+}
+
+void movimentoRainha (rainha){
+    for (rainha = 0; rainha < 8; rainha++){
+        printf("Esquerda ");
+    }
+}
+
+void movimentoCavalo (cavalo, cavalo2){
+    for (cavalo = 0; cavalo < 1; cavalo++){
+        printf("    Direita \n");
+        for (cavalo2 = 0; cavalo2 < 2; cavalo2++){           
+            printf("Cima\n");
+    }   }
+}
+
 int main() {
     int opcao, opcao2 = -1;
-    int bispo, torre, rainha, cavalo, cavalo2;
+    int bispoo, torree, rainhaa, cavaloo;
 
 
     printf("       ==============================================\n");
@@ -20,7 +47,7 @@ int main() {
     if (opcao == 1) {
         printf("\n      Você escolheu jogar!");
         while (opcao2 != 0){
-            printf("\n\nEscolha qual peça deseja mover:\n");
+            printf("\nEscolha qual peça deseja mover:\n");
     
             printf("1. Bispo\n");
             printf("2. Torre\n");
@@ -33,31 +60,22 @@ int main() {
             
             switch (opcao2) {
                 case 1:
-                    printf("Você escolheu mover o Bispo!\n");
-                    for (bispo = 0; bispo < 5; bispo++){
-                        printf("Cima\n");
-                        printf("Direita\n");    
-                    }
+                printf("Você escolheu mover o Bispo!\n");
+                movimentoBispo(bispoo);
                     break;
                 case 2:
                     printf("Você escolheu mover a Torre!\n");
-                    for (torre = 0; torre < 5; torre++){
-                        printf("Direita ");
-                    }
+                    movimentoTorre(torree);
+                    printf("\n");
                     break;
                 case 3:
                     printf("Você escolheu mover a Rainha!\n");
-                    for (rainha = 0; rainha < 8; rainha++){
-                        printf("Esquerda ");
-                    }
+                    movimentoRainha(rainhaa);
+                    printf("\n");
                     break;
                 case 4:
                     printf("Você escolheu mover o Cavalo!\n");
-                    for (cavalo = 0; cavalo < 2; cavalo++){
-                        printf("Cima\n");
-                        for (cavalo2 = 0; cavalo2 < cavalo; cavalo2++){
-                            printf("Direita ");
-                    }   }
+                    movimentoCavalo(cavaloo);
                     break;
                     printf("\n");
                     
